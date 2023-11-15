@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello BurgerController!{% endblock %}
+{% block title %}Hello liste burgers!{% endblock %}
 
 {% block body %}
 <style>
@@ -9,12 +9,12 @@
 </style>
 
 <div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
+    <h1>✅ Hello {{ controller_name }} from -> parent()  </h1>
+    <img src="https://www.google.com/search?client=firefox-b-d&sca_esv=582537645&sxsrf=AM9HkKm93MkF_vtoGVOf31ZY_A23qAdDsQ:1700033151554&q=image+lien+simple&tbm=isch&source=lnms&sa=X&ved=2ahUKEwi88-qAvcWCAxUdRaQEHaoZArYQ0pQJegQIDBAB&biw=1366&bih=643" alt="Image incredible">
     This friendly message is coming from:
     <ul>
-        <li>Your controller at <code><a href="{{ '/media/Web/schandel2u/Symfony/src/Controller/BurgerController.php'|file_link(0) }}">src/Controller/BurgerController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/media/Web/schandel2u/Symfony/templates/burger/index.html.twig'|file_link(0) }}">templates/burger/index.html.twig</a></code></li>
+        <li>Your controller at <code><a href="{{ 'C:/wamp64/www/SymfonyBase/src/Controller/BurgerController.php'|file_link(0) }}">src/Controller/BurgerController.php</a></code></li>
+        <li>Your template at <code><a href="{{ 'C:/wamp64/www/SymfonyBase/templates/burger/index.html.twig'|file_link(0) }}">templates/burger/index.html.twig</a></code></li>
     </ul>
 </div>
 {% endblock %}
