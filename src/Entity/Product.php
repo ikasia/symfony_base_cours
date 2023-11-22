@@ -17,4 +17,8 @@ class Product
     {
         return $this->id;
     }
+
+    // #[ORM\ManyToMany(targetEntity: Product::class, inversedBy: 'product')]
+    // private ?Burger $burger = null;
+
 }

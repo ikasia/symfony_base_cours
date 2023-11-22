@@ -2,12 +2,11 @@
 
 namespace App\Entity;
 
-use App\Repository\PainRepository;
+use App\Repository\OignonRepository;
 use Doctrine\ORM\Mapping as ORM;
 
-
-#[ORM\Entity(repositoryClass: PainRepository::class)]
-class Pain
+#[ORM\Entity(repositoryClass: OignonRepository::class)]
+class Oignon
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
@@ -19,6 +18,6 @@ class Pain
         return $this->id;
     }
 
-    #[ORM\ManyToMany(targetEntity: Burger::class, inversedBy: 'pain')]
+    #[ORM\ManyToMany(targetEntity: Burger::class, inversedBy: 'oignon')]
     private ?Burger $burger = null;
 }

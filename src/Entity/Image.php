@@ -11,6 +11,7 @@ class Image
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
+    #[ORM\OneToOne(inversedBy: 'image')]
     private ?int $id = null;
  
     #[ORM\Column(length: 255)]
@@ -18,4 +19,7 @@ class Image
  
     #[ORM\Column(length: 255)]
     private ?string $altText = null;
+
+    // #[ORM\OneToOne(targetEntity: Burger::class, inversedBy: 'image')]
+    // private ?Burger $burger = null;
 }

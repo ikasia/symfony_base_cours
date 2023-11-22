@@ -19,4 +19,7 @@ class Sauce
     public function setNom(string $nom): void {
         $this->nom = $nom;
     }
+
+    #[ORM\ManyToMany(targetEntity: Burger::class, inversedBy: 'sauce')]
+    private ?Burger $burger = null;
 }
