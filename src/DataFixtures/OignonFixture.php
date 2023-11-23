@@ -22,7 +22,7 @@ class OignonFixture extends Fixture
 
         foreach ($typesOignons as $key => $typeOignon) {
             $oignon = new Oignon();
-            $oignon->setType($typeOignon);
+            $oignon->setNom($typeOignon);
             $manager->persist($oignon);
             $this->addReference(self::OIGNON_REFERENCE . '_' . $key, $oignon);
         }

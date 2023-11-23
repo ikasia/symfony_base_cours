@@ -17,6 +17,9 @@ class Commentaire
     {
         return $this->id;
     }
+    public function setType(string $type): void{
+        $this->type = $type;
+    }
 
     #[ORM\ManyToOne(targetEntity: Burger::class, inversedBy: 'commentaire')]
     private ?Burger $burger = null;

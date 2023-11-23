@@ -23,7 +23,7 @@ class PainFixture extends Fixture
 
         foreach ($typesPains as $key => $typePain) {
             $pain = new Pain();
-            $pain->setType($typePain);
+            $pain->setNom($typePain);
             $manager->persist($pain);
             $this->addReference(self::PAIN_REFERENCE . '_' . $key, $pain);
         }

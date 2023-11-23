@@ -5,7 +5,6 @@ namespace App\Entity;
 use App\Repository\PainRepository;
 use Doctrine\ORM\Mapping as ORM;
 
-
 #[ORM\Entity(repositoryClass: PainRepository::class)]
 class Pain
 {
@@ -14,11 +13,14 @@ class Pain
     #[ORM\Column]
     private ?int $id = null;
 
-    public function getId(): ?int
-    {
+    #[ORM\Column(length: 255)]
+    private ?string $nom = null;
+
+    public function getId(): ?int {
         return $this->id;
     }
 
-    #[ORM\ManyToMany(targetEntity: Burger::class, inversedBy: 'pain')]
-    private ?Burger $burger = null;
+    public function setNom(string $nom): void {
+        $this->nom = $nom;
+    }
 }

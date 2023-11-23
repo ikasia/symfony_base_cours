@@ -13,11 +13,17 @@ class Oignon
     #[ORM\Column]
     private ?int $id = null;
 
-    public function getId(): ?int
-    {
+    #[ORM\Column(length: 255)]
+    private ?string $nom = null;
+
+    #[ORM\ManyToMany(targetEntity: Burger::class, inversedBy: 'oignons')]
+    private ?Burger $burgers = null;
+
+    public function getId(): ?int {
         return $this->id;
     }
 
-    #[ORM\ManyToMany(targetEntity: Burger::class, inversedBy: 'oignon')]
-    private ?Burger $burger = null;
+    public function setNom(string $nom): void {
+        $this->nom = $nom;
+    }
 }
