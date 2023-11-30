@@ -1,0 +1,12 @@
+ {% extends 'base.html.twig' %}
+{% block title %}{{ parent() }} | Liste oignon{% endblock %}
+ 
+{% block body %}
+    <div>
+        <h1 class="text-3xl font-bold underline m-0">
+            Liste oignon
+        </h1>
+    </div>
+
+    <a class="nav-link" href="{{ path('oignon_oignon') }}"> oignon </a>
+{% endblock %}

@@ -13,14 +13,15 @@ class Commentaire
     #[ORM\Column]
     private ?int $id = null;
 
+    #[ORM\Column(length: 255)]
+    private ?string $contenu = null;
+
     public function getId(): ?int
     {
         return $this->id;
     }
-    public function setType(string $type): void{
-        $this->type = $type;
-    }
 
-    #[ORM\ManyToOne(targetEntity: Burger::class, inversedBy: 'commentaire')]
-    private ?Burger $burger = null;
+    public function setContenu(string $contenu): void {
+        $this->contenu = $contenu;
+    }
 }
